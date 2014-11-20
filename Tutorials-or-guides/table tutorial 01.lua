@@ -156,7 +156,7 @@ function Main()
 		print("Player did have a shovel!");
 		print("Upgrading player with more slot space in inventory");
 		
-		Inventory_AddSlotItem("slot_item7", "empty");
+		Inventory_AddSlotItem("slot_item7", "empty"); -- this one may be obsolete!
 		Inventory_Add(item_fish, 7);
 		
 		if (Inventory_Get(7) == item_fish) then
