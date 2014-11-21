@@ -60,6 +60,7 @@ function Inventory_Get(index)
 end
 
 -- so we forexample can have one more slot_item (like slot_item7)
+-- to have this working we need to have 'k' as a number
 function Inventory_AddSlotItem(k,v)
 
 	t_inventory[k] = v;
@@ -138,7 +139,6 @@ item_fish =
 
 	type = t_Types[3], -- this is a piece of food
 	name = "fish",
-	damage = 5,
 
 }
 
