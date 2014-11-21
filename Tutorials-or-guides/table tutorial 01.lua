@@ -23,7 +23,7 @@ function Inventory_Add(item, index)
 	-- if index is NIL then set the index to 1 (0 would be nil)
 	if (index == nil) then
 		index = iCounter;
-		if iCounter > 6 then
+		if iCounter < 6 then
 			iCounter = iCounter + 1; -- add 1 to the index
 		else -- whoops its greater than 6, let's reset it
 			iCounter = 1;
