@@ -1,6 +1,6 @@
 function Game_AddQuestionSequence(question, answers, correct, correct_message, wrong_message, callback_onfail, callback)
 
-	local _QASKED = false; -- to check wether the answer possibilites have already been asked or not
+	local _QASKED = false; -- to check wether the answer possibilites have already been printed out or not
 	local _DONE = false;
 
 	while _DONE == false do -- always do this - until told not to
@@ -19,7 +19,7 @@ function Game_AddQuestionSequence(question, answers, correct, correct_message, w
 				
 			end
 			
-			_QASKED = true; -- so we dont crash the program (may be obsolete my keep it for safety!)
+			_QASKED = true; -- so we dont crash the program (may be obsolete but keep it for safety!)
 			
 		end
 		
