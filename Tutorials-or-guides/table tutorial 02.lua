@@ -57,7 +57,7 @@ function Game_AddQuestionSequence(question, answers, correct, correct_message, w
 		
 		end
 		
-	end -- repeat until _DONE is true
+	end -- repeat until _DONE is false
 
 	print(correct_message);
 
