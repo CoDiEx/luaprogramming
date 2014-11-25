@@ -9,9 +9,9 @@ function Game_AddQuestionSequence(question, answers, correct, correct_message, w
 			
 			print(question); -- first we want to ask the question
 			
-			for i=1, #answers do -- loop through the table to print the not asked questions
+			for i=1, #answers do -- loop through the table to print the not asked answers
 				
-				if not answers[i].asked then -- means: "if questions[i].asked == false then"
+				if not answers[i].asked then -- means: "if answers[i].asked == false then"
 					
 					print(answers[i].id ..": " ..answers[i].title); -- print out the possibilites with their ID (the ".." means '+' so print("hello " .."friend") would be "hello friend")
 					
