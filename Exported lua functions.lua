@@ -1,11 +1,11 @@
-// load the debugging functions
-            luaState.RegisterFunction("Debug", this, typeof(Form1).GetMethod("lua_Print"));
-            luaState.RegisterFunction("import", this, typeof(Form1).GetMethod("lua_import"));
-            luaState.RegisterFunction("try", this, typeof(Form1).GetMethod("lua_try"));
-            luaState.RegisterFunction("try_chunk", this, typeof(Form1).GetMethod("lua_try_chunk"));
+-- useful functions:
+Debug(string output)
+import(string file)
+try(string function)
+try_chunk(string chunk);
 
-            // load the program utilities
-            luaState.RegisterFunction("program_SetTitle", this, typeof(Form1).GetMethod("lua_program_settitle"));
+-- Program functions:
+program_SetTitle(string title);
             luaState.RegisterFunction("program_SetSize", this, typeof(Form1).GetMethod("lua_program_setsize"));
             luaState.RegisterFunction("program_Exit", this, typeof(Form1).GetMethod("lua_program_close"));
             luaState.RegisterFunction("program_Maximize", this, typeof(Form1).GetMethod("lua_program_maximize"));
@@ -54,24 +54,24 @@
             // load the windows utilities
             luaState.RegisterFunction("Windows_MessageBox", this, typeof(Form1).GetMethod("lua_windows_messagebox"));
 
-            // load the timer utilities
-            luaState.RegisterFunction("Timer_Create", this, typeof(Form1).GetMethod("lua_timer_create"));
-            luaState.RegisterFunction("Timer_GetTime", this, typeof(Form1).GetMethod("lua_timer_gettime"));
-            luaState.RegisterFunction("Timer_Start", this, typeof(Form1).GetMethod("lua_timer_start"));
-            luaState.RegisterFunction("Timer_Stop", this, typeof(Form1).GetMethod("lua_timer_stop"));
-            luaState.RegisterFunction("Timer_Running", this, typeof(Form1).GetMethod("lua_timer_running"));
-            luaState.RegisterFunction("Timer_Done", this, typeof(Form1).GetMethod("lua_timer_isdone"));
-            luaState.RegisterFunction("Timer_Repeat", this, typeof(Form1).GetMethod("lua_timer_setinterval"));
-            luaState.RegisterFunction("Timer_SetCallback", this, typeof(Form1).GetMethod("lua_timer_setcallback"));
+-- Timer functions:
+Timer_Create
+Timer_GetTime
+Timer_Start
+Timer_Stop
+Timer_Running
+Timer_Done
+Timer_Repeat
+Timer_SetCallback
 
 -- Progressbar functions:
 Progressbar_Create
 Progressbar_Start
 Progressbar_Stop
-Progressbar_Reset", this, typeof(Form1).GetMethod("lua_progressbar_reset"));
-Progressbar_Render", this, typeof(Form1).GetMethod("lua_progressbar_show"));
-Progressbar_Add", this, typeof(Form1).GetMethod("lua_progressbar_add"));
-Progressbar_Remove", this, typeof(Form1).GetMethod("lua_progressbar_remove"));
-Progressbar_MaximumAddition", this, typeof(Form1).GetMethod("lua_progressbar_maxaddition"));
-Progressbar_GetRemaining", this, typeof(Form1).GetMethod("lua_progressbar_timeremaining"));
-Progressbar_IsStarted", this, typeof(Form1).GetMethod("lua_progressbar_started"));
+Progressbar_Reset
+Progressbar_Render
+Progressbar_Add
+Progressbar_Remove
+Progressbar_MaximumAddition
+Progressbar_GetRemaining
+Progressbar_IsStarted
