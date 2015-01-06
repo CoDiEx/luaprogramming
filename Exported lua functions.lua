@@ -2,15 +2,15 @@
 Debug(string output)
 import(string file)
 try(string function)
-try_chunk(string chunk);
+try_chunk(string chunk)
 
 -- Program functions:
-program_SetTitle(string title);
-program_SetSize(int width, int height);
+program_SetTitle(string title)
+program_SetSize(int width, int height)
 program_Exit()
-program_Maximize();
-program_Minimize();
-program_SetIcon(string icon);
+program_Maximize()
+program_Minimize()
+program_SetIcon(string icon)
 
             // load the bitmap utilities
             luaState.RegisterFunction("bitmap_Register", this, typeof(Form1).GetMethod("lua_bitmap_add"));
@@ -26,15 +26,14 @@ program_SetIcon(string icon);
             luaState.RegisterFunction("bitmap_SendBack", this, typeof(Form1).GetMethod("lua_bitmap_back"));
             luaState.RegisterFunction("bitmap_SendFront", this, typeof(Form1).GetMethod("lua_bitmap_front"));
 
-            // load the util utilities
-            luaState.RegisterFunction("Util_MouseX", this, typeof(Form1).GetMethod("lua_util_mouseX"));
-            luaState.RegisterFunction("Util_MouseY", this, typeof(Form1).GetMethod("lua_util_mouseY"));
-            //luaState.RegisterFunction("Util_AddButton", this, typeof(Form1).GetMethod("lua_util_addbutton"));
-            luaState.RegisterFunction("Util_SetBackgroundColor", this, typeof(Form1).GetMethod("lua_util_setbackgroundcolor"));
-            luaState.RegisterFunction("Util_GetScreenWidth", this, typeof(Form1).GetMethod("lua_util_getscreenwidth"));
-            luaState.RegisterFunction("Util_GetScreenHeight", this, typeof(Form1).GetMethod("lua_util_getscreenheight"));
-            luaState.RegisterFunction("Util_ClearScreen", this, typeof(Form1).GetMethod("lua_util_clear"));
-            luaState.RegisterFunction("Util_CreateColorFromRGB", this, typeof(Form1).GetMethod("lua_util_getcolorfromtable"));
+-- Util functions:
+Util_MouseX();
+Util_MouseY();
+Util_SetBackgroundColor(LuaColor color);
+Util_GetScreenWidth()
+Util_GetScreenHeight()
+Util_ClearScreen()
+Util_CreateColorFromRGB(int r, int g, int b)
 
             // load the text utilities
             luaState.RegisterFunction("Text_Register", this, typeof(Form1).GetMethod("lua_text_register"));
@@ -51,8 +50,8 @@ program_SetIcon(string icon);
             luaState.RegisterFunction("Text_SendFront", this, typeof(Form1).GetMethod("lua_text_front"));
             luaState.RegisterFunction("Text_SetBackColor", this, typeof(Form1).GetMethod("lua_text_setbackcolor"));
 
-            // load the windows utilities
-            luaState.RegisterFunction("Windows_MessageBox", this, typeof(Form1).GetMethod("lua_windows_messagebox"));
+-- Windows core functions:
+Windows_MessageBox(string context, string title, int buttontype, string callback);
 
 -- Timer functions:
 Timer_Create
