@@ -51,26 +51,26 @@ Text_SendFront(string ID)
 Text_SetBackColor(string ID, LuaColor color)
 
 -- Windows core functions:
-Windows_MessageBox(string context, string title, int buttontype, string callback);
+Windows_MessageBox(string context, string title, int buttontype, string callback)
 
 -- Timer functions:
-Timer_Create
-Timer_GetTime
-Timer_Start
-Timer_Stop
-Timer_Running
-Timer_Done
-Timer_Repeat
-Timer_SetCallback
+Timer_Create(int time)
+Timer_GetTime(LuaTimer timer)
+Timer_Start(LuaTimer timer)
+Timer_Stop(LuaTimer timer)
+Timer_Running(LuaTimer timer)
+Timer_Done(LuaTimer timer)
+Timer_Repeat(LuaTimer timer, bool enabled)
+Timer_SetCallback(LuaTimer timer, string function)
 
 -- Progressbar functions:
-Progressbar_Create
-Progressbar_Start
-Progressbar_Stop
-Progressbar_Reset
-Progressbar_Render
-Progressbar_Add
-Progressbar_Remove
-Progressbar_MaximumAddition
-Progressbar_GetRemaining
-Progressbar_IsStarted
+Progressbar_Create(int x, int y, int width, int height, int delay, string function)
+Progressbar_Start(LuaProgressBar pb)
+Progressbar_Stop(LuaProgressBar pb)
+Progressbar_Reset(LuaProgressBar pb)
+Progressbar_Render(LuaProgressBar pb, bool render)
+Progressbar_Add(LuaProgressBar pb, int addition)
+Progressbar_Remove(LuaProgressBar pb, int subtraction)
+Progressbar_MaximumAddition(LuaProgressBar pb, int maxAdd)
+Progressbar_GetRemaining(LuaProgressBar pb)
+Progressbar_IsStarted(LuaProgressBar pb)
