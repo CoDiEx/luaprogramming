@@ -7,9 +7,9 @@ try_chunk(string chunk);
 -- Program functions:
 program_SetTitle(string title);
 program_SetSize(int width, int height);
-program_Exit(unkown)
-program_Maximize(nil);
-program_Minimize(nil);
+program_Exit()
+program_Maximize();
+program_Minimize();
 program_SetIcon(string icon);
 
             // load the bitmap utilities
