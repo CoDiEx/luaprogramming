@@ -36,19 +36,19 @@ Util_ClearScreen()
 Util_CreateColorFromRGB(int r, int g, int b)
 
 -- Text functions:
-Text_Register()
-Text_RegisterIfNotFound() -- it is recommended to use this over the first function!
-Text_Render()
-Text_IsVisible()
-Text_Destroy()
-Text_SetPosition()
-Text_GetText()
-Text_SetText()
-Text_SetFont()
-Text_SetParent()
-Text_SendBack()
-Text_SendFront()
-Text_SetBackColor()
+Text_Register(string ID, string text, int width, int height, int x, int y)
+Text_RegisterIfNotFound(string ID, string text, int width, int height, int x, int y) -- it is recommended to use this over the first function!
+Text_Render(string ID, bool render)
+Text_IsVisible(string ID)
+Text_Destroy(string ID)
+Text_SetPosition(string ID, int x, int y)
+Text_GetText(string ID)
+Text_SetText(string ID, string text)
+Text_SetFont(string ID, string fontname, LuaColor color, int fontSize)
+Text_SetParent(string ID, string parentID)
+Text_SendBack(string ID)
+Text_SendFront(string ID)
+Text_SetBackColor(string ID, LuaColor color)
 
 -- Windows core functions:
 Windows_MessageBox(string context, string title, int buttontype, string callback);
