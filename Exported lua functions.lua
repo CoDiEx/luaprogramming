@@ -12,19 +12,19 @@ program_Maximize()
 program_Minimize()
 program_SetIcon(string icon)
 
-            // load the bitmap utilities
-            luaState.RegisterFunction("bitmap_Register", this, typeof(Form1).GetMethod("lua_bitmap_add"));
-            luaState.RegisterFunction("bitmap_Render", this, typeof(Form1).GetMethod("lua_bitmap_render"));
-            luaState.RegisterFunction("bitmap_IsVisible", this, typeof(Form1).GetMethod("lua_bitmap_is_hidden"));
-            luaState.RegisterFunction("bitmap_Destroy", this, typeof(Form1).GetMethod("lua_bitmap_remove"));
-            luaState.RegisterFunction("bitmap_SetPosition", this, typeof(Form1).GetMethod("lua_bitmap_setposition"));
-            luaState.RegisterFunction("bitmap_RegisterIfNotFound", this, typeof(Form1).GetMethod("lua_bitmap_add_if_not_found"));
-            luaState.RegisterFunction("bitmap_SetParent", this, typeof(Form1).GetMethod("lua_bitmap_setparent"));
-            luaState.RegisterFunction("bitmap_SetImage", this, typeof(Form1).GetMethod("lua_bitmap_changeimage"));
-            luaState.RegisterFunction("bitmap_GetImage", this, typeof(Form1).GetMethod("lua_bitmap_getimage"));
-            luaState.RegisterFunction("bitmap_SetSize", this, typeof(Form1).GetMethod("lua_bitmap_setsize"));
-            luaState.RegisterFunction("bitmap_SendBack", this, typeof(Form1).GetMethod("lua_bitmap_back"));
-            luaState.RegisterFunction("bitmap_SendFront", this, typeof(Form1).GetMethod("lua_bitmap_front"));
+-- Bitmap functions:
+bitmap_Register(string ID, int width, int height, int x, int y, string imagePath)
+bitmap_RegisterIfNotFound(string ID, int width, int height, int x, int y, string imagePath) -- it is recommended to use this over the first function!
+bitmap_Render(string ID, bool render)
+bitmap_IsVisible(string ID)
+bitmap_Destroy(string ID)
+bitmap_SetPosition(string ID, int x, int y)
+bitmap_SetParent(string ID, string parentID)
+bitmap_SetImage(string ID, string imagePath)
+bitmap_GetImage(string ID)
+bitmap_SetSize(string ID, int width, int height)
+bitmap_SendBack(string ID)
+bitmap_SendFront(string ID)
 
 -- Util functions:
 Util_MouseX();
@@ -35,20 +35,20 @@ Util_GetScreenHeight()
 Util_ClearScreen()
 Util_CreateColorFromRGB(int r, int g, int b)
 
-            // load the text utilities
-            luaState.RegisterFunction("Text_Register", this, typeof(Form1).GetMethod("lua_text_register"));
-            luaState.RegisterFunction("Text_RegisterIfNotFound", this, typeof(Form1).GetMethod("lua_text_register_if_not_found"));
-            luaState.RegisterFunction("Text_Render", this, typeof(Form1).GetMethod("lua_text_render"));
-            luaState.RegisterFunction("Text_IsVisible", this, typeof(Form1).GetMethod("lua_text_is_hidden"));
-            luaState.RegisterFunction("Text_Destroy", this, typeof(Form1).GetMethod("lua_text_remove"));
-            luaState.RegisterFunction("Text_SetPosition", this, typeof(Form1).GetMethod("lua_text_setposition"));
-            luaState.RegisterFunction("Text_GetText", this, typeof(Form1).GetMethod("lua_text_gettext"));
-            luaState.RegisterFunction("Text_SetText", this, typeof(Form1).GetMethod("lua_text_settext"));
-            luaState.RegisterFunction("Text_SetFont", this, typeof(Form1).GetMethod("lua_text_setfont"));
-            luaState.RegisterFunction("Text_SetParent", this, typeof(Form1).GetMethod("lua_text_setparent"));
-            luaState.RegisterFunction("Text_SendBack", this, typeof(Form1).GetMethod("lua_text_back"));
-            luaState.RegisterFunction("Text_SendFront", this, typeof(Form1).GetMethod("lua_text_front"));
-            luaState.RegisterFunction("Text_SetBackColor", this, typeof(Form1).GetMethod("lua_text_setbackcolor"));
+-- Text functions:
+Text_Register()
+Text_RegisterIfNotFound() -- it is recommended to use this over the first function!
+Text_Render()
+Text_IsVisible()
+Text_Destroy()
+Text_SetPosition()
+Text_GetText()
+Text_SetText()
+Text_SetFont()
+Text_SetParent()
+Text_SendBack()
+Text_SendFront()
+Text_SetBackColor()
 
 -- Windows core functions:
 Windows_MessageBox(string context, string title, int buttontype, string callback);
