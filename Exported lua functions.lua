@@ -6,11 +6,11 @@ try_chunk(string chunk);
 
 -- Program functions:
 program_SetTitle(string title);
-            luaState.RegisterFunction("program_SetSize", this, typeof(Form1).GetMethod("lua_program_setsize"));
-            luaState.RegisterFunction("program_Exit", this, typeof(Form1).GetMethod("lua_program_close"));
-            luaState.RegisterFunction("program_Maximize", this, typeof(Form1).GetMethod("lua_program_maximize"));
-            luaState.RegisterFunction("program_Minimize", this, typeof(Form1).GetMethod("lua_program_minimize"));
-            luaState.RegisterFunction("program_SetIcon", this, typeof(Form1).GetMethod("lua_program_setIcon"));
+program_SetSize(int width, int height);
+program_Exit(unkown)
+program_Maximize(nil);
+program_Minimize(nil);
+program_SetIcon(string icon);
 
             // load the bitmap utilities
             luaState.RegisterFunction("bitmap_Register", this, typeof(Form1).GetMethod("lua_bitmap_add"));
