@@ -77,3 +77,6 @@ Progressbar_Remove(LuaProgressBar pb, int subtraction)
 Progressbar_MaximumAddition(LuaProgressBar pb, int maxAdd)
 Progressbar_GetRemaining(LuaProgressBar pb)
 Progressbar_IsStarted(LuaProgressBar pb)
+
+-- Button functions:
+Button_Create(string text, int width, int height, int x, int y, string callback)
