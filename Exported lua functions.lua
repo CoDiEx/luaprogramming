@@ -102,3 +102,13 @@ LuaButton   Button_Create(string text, int width, int height, int x, int y, stri
 void        Button_SetText(LuaButton b)
 string      Button_GetText(LuaButton b)
 void        Button_SetImage(LuaButton b, string path)
+
+-- 2D Texture functions:
+LuaTexture  Texture_Create(string path)
+void        Texture_GenerateTiles(LuaTexture tex, int width, int height)
+LuaTexture  Texture_GetTileAt(LuaTexture tex, int index)
+bool        Texture_HasTileMap(LuaTexture tex)
+
+
+
+-- All these functions are available in v0.3 of CTDLUA
