@@ -112,3 +112,15 @@ bool        Texture_HasTileMap(LuaTexture tex)
 
 
 -- All these functions are available in v0.3 of CTDLUA
+--[[
+
+  Changelog:
+    
+    v0.3:
+    Added all button functions
+    Added all 2D Texture functions
+    Added Util_SetBackground(string path)
+    Added Delay(double sleeptime)
+    Added Error(string errormessage)
+    
+]]
