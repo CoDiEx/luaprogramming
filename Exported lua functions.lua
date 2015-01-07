@@ -31,11 +31,12 @@ bitmap_SendFront(string ID)
 -- Util functions:
 Util_MouseX();
 Util_MouseY();
-Util_SetBackgroundColor(LuaColor color);
+Util_SetBackgroundColor(LuaColor color)
 Util_GetScreenWidth()
 Util_GetScreenHeight()
 Util_ClearScreen()
 Util_CreateColorFromRGB(int r, int g, int b)
+Util_SetBackground(string path)
 
 -- Text functions:
 Text_Register(string ID, string text, int width, int height, int x, int y)
