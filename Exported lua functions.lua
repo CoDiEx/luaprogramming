@@ -4,6 +4,7 @@ import(string file)
 try(string function)
 try_chunk(string chunk)
 Delay(double sleeptime)
+Error(string errormessage)
 
 -- Program functions:
 program_SetTitle(string title)
