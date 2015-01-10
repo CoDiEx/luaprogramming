@@ -46,6 +46,8 @@ string  bitmap_GetImage(string ID)
 void    bitmap_SetSize(string ID, int width, int height)
 void    bitmap_SendBack(string ID)
 void    bitmap_SendFront(string ID)
+void    bitmap_FromTexture(string id, int x, int y, LuaTexture tex)
+void    bitmap_SetImageFromTexture(string id, LuaTexture texture)
 
 -- Util functions:
 int     Util_MouseX();
@@ -56,6 +58,7 @@ int     Util_GetScreenHeight()
 void    Util_ClearScreen()
 Color   Util_CreateColorFromRGB(int r, int g, int b)
 void    Util_SetBackground(string path)
+void    Util_SetNilBackground()
 
 -- Text functions:
 void    Text_Register(string ID, string text, int width, int height, int x, int y)
@@ -109,9 +112,11 @@ void        Texture_GenerateTiles(LuaTexture tex, int width, int height)
 LuaTexture  Texture_GetTileAt(LuaTexture tex, int index)
 bool        Texture_HasTileMap(LuaTexture tex)
 
+-- Sound functions:
+void  Sound_Add(string filelocation, string soundID)
+void  Sound_play(string soundID)
 
-
--- All these functions are available in v0.3 of CTDLUA
+-- All these functions are available in v0.3.2 of CTDLUA
 --[[
 
   Changelog:
@@ -122,5 +127,11 @@ bool        Texture_HasTileMap(LuaTexture tex)
     Added Util_SetBackground(string path)
     Added Delay(double sleeptime)
     Added Error(string errormessage)
+    v0.3.2
+    Added Util_SetNilBackground()
+    Added Sound_Add(string filelocation, string soundID)
+    Added Sound_play(string soundID)
+    Added bitmap_FromTexture(string id, int x, int y, LuaTexture tex)
+    Added bitmap_SetImageFromTexture(string id, LuaTexture texture)
     
 ]]
